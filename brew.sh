@@ -91,5 +91,8 @@ brew install ssh-copy-id
 brew install tree
 brew install zopfli
 
+brew install tfenv
+brew install jq
+
 # Remove outdated versions from the cellar.
 brew cleanup
