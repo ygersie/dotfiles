@@ -97,6 +97,7 @@ brew install mas # command line interface for the Mac App store
 
 brew cask install slack
 brew cask install docker
+brew cask install google-chrome
 brew cask install visual-studio-code
 brew cask install google-cloud-sdk
 
