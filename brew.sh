@@ -20,8 +20,7 @@ ln -s "${BREW_PREFIX}/bin/gsha256sum" "${BREW_PREFIX}/bin/sha256sum"
 brew install moreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew install findutils
-# Install GNU `sed`, overwriting the built-in `sed`.
-brew install gnu-sed --with-default-names
+brew install gnu-sed
 # Install a modern version of Bash.
 brew install bash
 brew install bash-completion2
@@ -32,14 +31,12 @@ if ! fgrep -q "${BREW_PREFIX}/bin/bash" /etc/shells; then
   chsh -s "${BREW_PREFIX}/bin/bash";
 fi;
 
-# Install `wget` with IRI support.
-brew install wget --with-iri
-
 # Install GnuPG to enable PGP-signing commits.
 brew install gnupg
 
 # Install more recent versions of some macOS tools.
-brew install vim --with-override-system-vi
+brew install wget
+brew install vim
 brew install grep
 brew install openssh
 # brew install gmp
@@ -89,12 +86,14 @@ brew install ssh-copy-id
 brew install tree
 brew install zopfli
 
+berw install go
 brew install gh
 brew install tfenv
 brew install jq
 brew install pwgen
 brew install mas # command line interface for the Mac App store
 
+brew cask install iterm2
 brew cask install slack
 brew cask install docker
 brew cask install google-chrome
@@ -103,3 +102,8 @@ brew cask install google-cloud-sdk
 
 # Remove outdated versions from the cellar.
 brew cleanup
+
+# setup symlinks to gnu equivalents of utils to be included in PATH
+for gnuutil in /usr/local/opt/*/libexec/gnubin/*; do
+    ln -s $gnuutil /usr/local/gnubin/
+done
