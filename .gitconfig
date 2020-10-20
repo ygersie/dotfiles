@@ -184,4 +184,12 @@
 
 [include]
 
-    path = ~/.gitconfig.local
+	path = ~/.gitconfig.local
+
+[pull]
+
+	rebase = false
+
+[pager]
+
+	diff = true
