@@ -91,6 +91,7 @@ brew install zopfli
 
 brew install tfenv
 brew install jq
+brew install pwgen
 
 # Remove outdated versions from the cellar.
 brew cleanup
