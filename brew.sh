@@ -93,5 +93,8 @@ brew install tfenv
 brew install jq
 brew install pwgen
 
+brew cask install visual-studio-code
+brew cask install google-cloud-sdk
+
 # Remove outdated versions from the cellar.
 brew cleanup
