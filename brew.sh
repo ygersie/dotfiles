@@ -107,3 +107,6 @@ brew cleanup
 for gnuutil in /usr/local/opt/*/libexec/gnubin/*; do
     ln -s $gnuutil /usr/local/gnubin/
 done
+
+# install Lastpass app from App Store
+mas lucky "Lastpass Password Manager"
