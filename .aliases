@@ -118,3 +118,10 @@ alias reload="exec ${SHELL} -l"
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
+
+# Git aliases
+alias g='git'
+alias gc='git commit -v'
+alias gcb='git checkout -b'
+alias gcm='git checkout master'
+alias gst='git status'

@@ -158,3 +158,9 @@ function o() {
 function tre() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
+
+function salt() {
+	reponame=$1
+	[[ -z ${reponame} ]] && { echo "need repo name"; return; }
+	cd "${HOME}/ebay/ecg-salt-${reponame}"
+}
