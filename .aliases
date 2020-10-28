@@ -121,7 +121,7 @@ alias path='echo -e ${PATH//:/\\n}'
 
 # Git aliases
 alias g='git'
-alias gb='git branch -v'
+alias gb='git branch'
 alias gc='git commit -v'
 alias gcb='git checkout -b'
 alias gcm='git checkout master'
