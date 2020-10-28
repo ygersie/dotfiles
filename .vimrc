@@ -47,6 +47,10 @@ syntax on
 set cursorline
 " Make tabs as wide as four spaces
 set tabstop=4
+" Use 4 spaces for indentation
+set shiftwidth=4
+" Insert spaces instead of tabs, use CTRL+V <TAB> to insert a real tab character
+set expandtab
 " Show “invisible” characters
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set list
@@ -102,6 +106,8 @@ if has("autocmd")
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 	" Treat .md files as Markdown
 	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
+	" Use real tabs with Makefiles
+	autocmd FileType make setlocal noexpandtab
 endif
 
 " turn off search highlight
