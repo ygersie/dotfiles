@@ -100,6 +100,7 @@ brew cask install docker
 brew cask install google-chrome
 brew cask install visual-studio-code
 brew cask install google-cloud-sdk
+brew cask install tunnelblick
 
 # Remove outdated versions from the cellar.
 brew cleanup
