@@ -194,6 +194,7 @@
 
 [pager]
 
-	log = true
+	branch = false
 	diff = true
 	grep = false
+	log = true
