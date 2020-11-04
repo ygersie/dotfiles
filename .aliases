@@ -84,7 +84,8 @@ alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && 
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 
 # URL-encode strings
-alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
+alias urlencode='python -c "import fileinput, urllib; print(\" \".join([urllib.quote_plus(l) for l in fileinput.input()]));"'
+alias urldecode='python -c "import fileinput, urllib; print(\" \".join([urllib.unquote_plus(l) for l in fileinput.input()]));"'
 
 # Disable Spotlight
 alias spotoff="sudo mdutil -a -i off"
