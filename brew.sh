@@ -36,6 +36,7 @@ brew install gnupg
 
 # Install more recent versions of some macOS tools.
 brew install wget
+brew install htop
 brew install telnet
 brew install vim
 brew install grep
