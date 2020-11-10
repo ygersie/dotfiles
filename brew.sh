@@ -94,6 +94,7 @@ brew install tfenv
 brew install jq
 brew install pwgen
 brew install mas # command line interface for the Mac App store
+brew install ipcalc
 
 brew cask install iterm2
 brew cask install slack
@@ -107,6 +108,9 @@ brew cask install spotify
 # Remove outdated versions from the cellar.
 brew cleanup
 
+sudo mkdir -p /usr/local/gnubin
+sudo chown -R ${USER}: /usr/local/gnubin
+chmod 775 /usr/local/gnubin
 # setup symlinks to gnu equivalents of utils to be included in PATH
 for gnuutil in /usr/local/opt/*/libexec/gnubin/*; do
     ln -s $gnuutil /usr/local/gnubin/
