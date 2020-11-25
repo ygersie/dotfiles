@@ -51,6 +51,8 @@ set tabstop=4
 set shiftwidth=4
 " Insert spaces instead of tabs, use CTRL+V <TAB> to insert a real tab character
 set expandtab
+" use auto indentation
+set autoindent
 " Show “invisible” characters
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set list
