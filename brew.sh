@@ -88,7 +88,7 @@ brew install ssh-copy-id
 brew install tree
 brew install zopfli
 
-berw install go
+brew install go
 brew install gh
 brew install tfenv
 brew install jq
