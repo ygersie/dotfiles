@@ -95,6 +95,7 @@ brew install jq
 brew install pwgen
 brew install mas # command line interface for the Mac App store
 brew install ipcalc
+brew install lastpass-cli
 
 brew cask install iterm2
 brew cask install slack
