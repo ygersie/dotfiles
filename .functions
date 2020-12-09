@@ -162,5 +162,5 @@ function tre() {
 function salt() {
 	reponame=$1
 	[[ -z ${reponame} ]] && { echo "need repo name"; return; }
-	cd "${HOME}/ebay/ecg-salt-${reponame}"
+	cd "${HOME}/git/*/*/ecg-salt-${reponame}"
 }
