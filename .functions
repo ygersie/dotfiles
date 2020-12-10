@@ -162,5 +162,7 @@ function tre() {
 function salt() {
 	reponame=$1
 	[[ -z ${reponame} ]] && { echo "need repo name"; return; }
-    cd $(find ~/git -maxdepth 3 -type d -name "ecg-salt-${reponame}")
+    path=$(find ~/git -maxdepth 3 -type d -name "ecg-salt-${reponame}")
+    [[ -z "${path}" ]] && { echo "repo ecg-salt-${reponame} not found"; return; }
+    cd "${path}"
 }
