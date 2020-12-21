@@ -106,7 +106,7 @@ PS1="\[\033]0;\W\007\]"; # working directory base name
 PS1+="\[${bold}\]\n"; # newline
 if [[ -e "/usr/local/opt/kube-ps1/share/kube-ps1.sh" ]]; then
     source /usr/local/opt/kube-ps1/share/kube-ps1.sh
-    PS1+="\$(kube_ps1) | "
+    PS1+="\$(kube_ps1)"
 fi
 PS1+="\[${userStyle}\]\u"; # username
 PS1+="\[${white}\]@";

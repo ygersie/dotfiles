@@ -38,3 +38,4 @@ export BASH_SILENCE_DEPRECATION_WARNING=1;
 
 # https://github.com/jonmosco/kube-ps1
 export KUBE_PS1_SYMBOL_ENABLE=false;
+export KUBE_PS1_SUFFIX=") | ";
