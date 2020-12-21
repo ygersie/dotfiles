@@ -47,6 +47,11 @@ if which kubectl &> /dev/null; then
     source <(kubectl completion bash)
 fi
 
+# source (brew managed) google-cloud-sdk path and autocomletion
+for f in /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/{path.bash.inc,completion.bash.inc}; do
+    [[ -e ${f} ]] && source ${f}
+done
+
 # Add tab completion for `defaults read|write NSGlobalDomain`
 # You could just use `-g` instead, but I like being explicit
 complete -W "NSGlobalDomain" defaults;

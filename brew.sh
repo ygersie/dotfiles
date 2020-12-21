@@ -107,6 +107,8 @@ brew cask install adoptopenjdk
 brew cask install tunnelblick
 brew cask install spotify
 
+brew install kubectl helm kubectx kube-ps1
+
 # Remove outdated versions from the cellar.
 brew cleanup
 
