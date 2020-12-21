@@ -133,6 +133,8 @@ alias vim='vim -O'
 
 # Kubectl alias
 alias k=kubectl
+alias kctx=kubectx
+alias kns=kubens
 complete -F __start_kubectl k
 
 # swagger
