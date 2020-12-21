@@ -52,6 +52,10 @@ for f in /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/{path.bash
     [[ -e ${f} ]] && source ${f}
 done
 
+for f in /usr/local/opt/kubectx/etc/bash_completion.d/{kubectx,kubens}; do
+    [[ -e ${f} ]] && source ${f}
+done
+
 # Add tab completion for `defaults read|write NSGlobalDomain`
 # You could just use `-g` instead, but I like being explicit
 complete -W "NSGlobalDomain" defaults;
