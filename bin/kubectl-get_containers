@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+kubectl get pod/$1 -o json | jq -r '.spec.containers + .spec.initContainers | .[] | "\(.name) -> \(.image)"'
