@@ -166,3 +166,7 @@ function salt() {
     [[ -z "${path}" ]] && { echo "repo ecg-salt-${reponame} not found"; return; }
     cd "${path}"
 }
+
+function pod_containers() {
+    kubectl get pod/$1 -o json | jq -r '.spec.containers + .spec.initContainers | .[] | "\(.name) -> \(.image)"'
+}

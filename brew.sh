@@ -87,6 +87,7 @@ brew install rlwrap
 brew install ssh-copy-id
 brew install tree
 brew install zopfli
+brew install lz4
 
 brew install go
 brew install gh
@@ -96,6 +97,7 @@ brew install pwgen
 brew install mas # command line interface for the Mac App store
 brew install ipcalc
 brew install lastpass-cli
+brew install goreleaser
 
 brew cask install iterm2
 brew cask install slack
@@ -108,6 +110,9 @@ brew cask install tunnelblick
 brew cask install spotify
 
 brew install kubectl helm kubectx kube-ps1
+brew link --overwrite kubernetes-cli
+brew install kustomize
+brew install istioctl
 
 # Remove outdated versions from the cellar.
 brew cleanup
