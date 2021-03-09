@@ -99,15 +99,15 @@ brew install ipcalc
 brew install lastpass-cli
 brew install goreleaser
 
-brew cask install iterm2
-brew cask install slack
-brew cask install docker
-brew cask install google-chrome
-brew cask install visual-studio-code
-brew cask install google-cloud-sdk
-brew cask install adoptopenjdk
-brew cask install tunnelblick
-brew cask install spotify
+brew install --cask iterm2
+brew install --cask slack
+brew install --cask docker
+brew install --cask google-chrome
+brew install --cask visual-studio-code
+brew install --cask google-cloud-sdk
+brew install --cask adoptopenjdk
+brew install --cask tunnelblick
+brew install --cask spotify
 
 brew install kubectl helm kubectx kube-ps1
 brew link --overwrite kubernetes-cli
