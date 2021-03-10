@@ -39,8 +39,8 @@ if type _git &> /dev/null; then
 	complete -o default -o nospace -F _git g;
 fi;
 
-# Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
-[ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2- | tr ' ' '\n')" scp sftp ssh;
+# Add tab completion for SSH hostnames based on ~/.ssh/hosts.autocomplete, ignoring wildcards
+[ -e "$HOME/.ssh/hosts.autocomplete" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/hosts.autocomplete | grep -v "[?*]" | cut -d " " -f2- | tr ' ' '\n')" scp sftp ssh;
 
 # Add tab completion for kubectl commands
 if which kubectl &> /dev/null; then

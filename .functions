@@ -79,7 +79,7 @@ function dataurl() {
 function server() {
 	local port="${1:-8000}";
 	sleep 1 && open "http://localhost:${port}/" &
-	python -m http.server ${port}
+	python3 -m http.server ${port}
 }
 
 # Compare original and gzipped file size
@@ -167,6 +167,9 @@ function salt() {
     cd "${path}"
 }
 
-function pod_containers() {
-    kubectl get pod/$1 -o json | jq -r '.spec.containers + .spec.initContainers | .[] | "\(.name) -> \(.image)"'
-}
+if [[ -d ~/git ]]; then
+    function gogit() {
+        cd "$1"
+    }
+    complete -W "$(ls --color=never -d ~/git/*/*/*)" gogit
+fi
