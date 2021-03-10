@@ -167,9 +167,16 @@ function salt() {
     cd "${path}"
 }
 
-if [[ -d ~/git ]]; then
-    function gogit() {
-        cd "$1"
+GITDIR=~/git
+if [[ -d "${GITDIR}" ]]; then
+    function _ls_git_dir() {
+        curdir=$(pwd)
+        cd "${GITDIR}"
+        ls --color=never -d */*/*
+        cd "${curdir}"
     }
-    complete -W "$(ls --color=never -d ~/git/*/*/*)" gogit
+    function gogit() {
+        cd "${GITDIR}/$1"
+    }
+    complete -W "$(_ls_git_dir)" gogit
 fi
