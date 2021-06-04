@@ -180,6 +180,10 @@
 
 	insteadOf = "gist:"
 
+[url "ssh://git@github.es.ecg.tools/"]
+
+	insteadOf = "https://github.es.ecg.tools/"
+
 [init]
 
 	defaultBranch = main

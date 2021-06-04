@@ -108,6 +108,7 @@ brew install --cask google-cloud-sdk
 brew install --cask adoptopenjdk
 brew install --cask tunnelblick
 brew install --cask spotify
+brew install --cask firefox
 
 brew install kubectl helm kubectx kube-ps1
 brew link --overwrite kubernetes-cli
